@@ -6,7 +6,7 @@
     "test": "meteor test --once --driver-package meteortesting:mocha",
     "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
     "visualize": "meteor --production --extra-packages bundle-visualizer",
-    "deploy": "meteor deploy q.3c4j.com --free --mongo"
+    "deploy": "meteor deploy q.meteorapp.com --free --mongo"
   },
   "dependencies": {
     "@babel/runtime": "^7.15.4",

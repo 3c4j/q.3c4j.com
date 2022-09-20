@@ -23,9 +23,10 @@ export const Content = () => {
 
                     <div><Tags tags={question.tags}/></div>
 
-                    <h5 className="text-1xl md:text-2xl leading-normal mb-6 font-serif">{question.title}</h5>
+                    <h5 className="md:text-2xl leading-normal mb-6">Q: {question.title}</h5>
+                    <div className="leading-normal -mt-4 mb-2"> 最新回复 / Latest Reply: </div>
 
-                    <div className="ml-3 -mr-8">
+                    <div className="ml-2 -mr-8 px-2 border-2 border-dashed border-gray-200 shadow-md">
                         <p className="pr-6 md:pr-0 text-xs leading-normal md:leading-loose text-gray-900 mb-8">
                             {question.latestReply.content}
                         </p>
@@ -101,7 +102,7 @@ function latest() {
 function mkQuestion(d) {
     const reply = Replies[Math.floor(Math.random() * Replies.length)]
     return {
-        title: `${d.getFullYear()} 年 ${d.getMonth()+1} 月 ${d.getDate()} 日, 今天你 emo 了吗? "`,
+        title: `${d.getFullYear()} 年 ${d.getMonth()+1} 月 ${d.getDate()} 日, 今天你 emo 了吗? `,
         latestReply: {
             author: author,
             content: reply,
